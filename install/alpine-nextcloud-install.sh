@@ -134,8 +134,8 @@ server {
         location ^~ /.well-known/nodeinfo { return 301 /index.php/.well-known/nodeinfo; }
 }
 EOF
-sed -i -e 's|memory_limit = 128M|memory_limit = 512M|; $aapc.enable_cli=1' /etc/php82/php.ini
-sed -i -E '/^php_admin_(flag|value)\[opcache/s/^/;/' /etc/php82/php-fpm.d/nextcloud.conf
+sed -i -e 's|memory_limit = 128M|memory_limit = 512M|; $aapc.enable_cli=1' /etc/php83/php.ini
+sed -i -E '/^php_admin_(flag|value)\[opcache/s/^/;/' /etc/php83/php-fpm.d/nextcloud.conf
 msg_ok "Installed Nextcloud"
 
 msg_info "Adding Additional Nextcloud Packages"
